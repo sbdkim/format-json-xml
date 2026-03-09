@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f7f2e9" />
+      <stop offset="100%" stop-color="#e6dfd1" />
+    </linearGradient>
+    <linearGradient id="brand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f6f78" />
+      <stop offset="100%" stop-color="#f4a259" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="1050" cy="110" r="130" fill="#ffffff" opacity="0.5" />
+  <circle cx="150" cy="520" r="180" fill="#ffffff" opacity="0.3" />
+  <rect x="80" y="90" width="1040" height="450" rx="36" fill="#fffdf9" stroke="#d7cebf" />
+  <text x="120" y="185" fill="#1f6f78" font-size="28" font-family="Verdana, sans-serif" letter-spacing="8">FORMAT FOUNDRY</text>
+  <text x="120" y="285" fill="#1d2328" font-size="74" font-family="Georgia, serif">JSON and XML formatting</text>
+  <text x="120" y="360" fill="#1d2328" font-size="74" font-family="Georgia, serif">that stays in the browser.</text>
+  <text x="120" y="430" fill="#60707d" font-size="32" font-family="Verdana, sans-serif">Format, minify, validate, import, and export without a backend.</text>
+  <g transform="translate(120 475)">
+    <rect width="168" height="54" rx="27" fill="#1f6f78" />
+    <text x="84" y="34" fill="#ffffff" font-size="24" text-anchor="middle" font-family="Verdana, sans-serif">No tracking</text>
+  </g>
+  <g transform="translate(310 475)">
+    <rect width="202" height="54" rx="27" fill="#f4a259" />
+    <text x="101" y="34" fill="#1d2328" font-size="24" text-anchor="middle" font-family="Verdana, sans-serif">GitHub Pages ready</text>
+  </g>
+</svg>

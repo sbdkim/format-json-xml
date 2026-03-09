@@ -1,0 +1,15 @@
+{
+  "name": "Format Foundry",
+  "short_name": "Foundry",
+  "description": "Privacy-first JSON and XML formatter that runs entirely in your browser.",
+  "icons": [
+    {
+      "src": "./favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#1f6f78",
+  "background_color": "#f6f3ee",
+  "display": "standalone"
+}

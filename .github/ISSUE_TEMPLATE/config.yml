@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions
+    url: https://github.com/sbdkim/format-foundry/discussions
+    about: Use GitHub Discussions for open-ended questions after the repo is published.
