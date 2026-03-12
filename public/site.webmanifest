@@ -4,7 +4,7 @@
   "description": "Privacy-first JSON and XML formatter that runs entirely in your browser.",
   "icons": [
     {
-      "src": "./favicon.svg",
+      "src": "./favicon.png",
       "sizes": "any",
       "type": "image/svg+xml"
     }
