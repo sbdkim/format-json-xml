@@ -66,6 +66,7 @@ document.querySelector('#app').innerHTML = `
         <article class="editor-panel editor-panel-drop" id="dropZone">
           <div class="panel-header">
             <div>
+              <p class="panel-kicker">Draft</p>
               <h2>Input</h2>
               <p class="panel-description">Paste text, type directly, or drop a file here.</p>
             </div>
@@ -89,6 +90,7 @@ document.querySelector('#app').innerHTML = `
         <article class="editor-panel">
           <div class="panel-header">
             <div>
+              <p class="panel-kicker">Result</p>
               <h2>Output</h2>
               <p class="panel-description">Formatted or minified result. Copy it, download it, or reuse it.</p>
             </div>
@@ -99,7 +101,7 @@ document.querySelector('#app').innerHTML = `
           </div>
 
           <label class="sr-only" for="outputEditor">Output editor</label>
-          <textarea id="outputEditor" class="editor editor-output" spellcheck="false" readonly></textarea>
+          <textarea id="outputEditor" class="editor editor-output" spellcheck="false" readonly placeholder="Formatted or minified output will appear here."></textarea>
         </article>
       </section>
     </main>
