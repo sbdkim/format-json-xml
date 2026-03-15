@@ -42,4 +42,4 @@ npm run test
 
 ## Privacy / Notes
 - All parsing and formatting happen in the browser.
-- The public product name is `Format JSON & XML`, while the current repo slug remains `xml_json_formatter` until the rename pass.
+- The public product name is `Format JSON & XML`, and the repo slug target is `format-json-xml`.
