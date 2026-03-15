@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping improve Format Foundry.
+Thanks for helping improve Format JSON & XML.
 
 ## Development flow
 

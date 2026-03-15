@@ -1,7 +1,8 @@
 export const samples = {
   json: `{
-  "product": "Format Foundry",
-  "privacy": "browser-only",
+  "product": "Northline",
+  "workflow": "format-json-xml",
+  "privacy": "local-first",
   "features": ["format", "minify", "copy", "download", "import"],
   "release": {
     "version": "1.0.0",
@@ -9,7 +10,7 @@ export const samples = {
   }
 }`,
   xml: `<?xml version="1.0" encoding="UTF-8"?>
-<product name="Format Foundry" privacy="browser-only">
+<product name="Northline" workflow="format-json-xml" privacy="local-first">
   <features>
     <feature>format</feature>
     <feature>minify</feature>
@@ -86,7 +87,7 @@ export function inferModeFromFile(name, content) {
 }
 
 export function getDownloadName(mode, transform) {
-  return `format-foundry-${transform}.${mode}`;
+  return `format-json-xml-${transform}.${mode}`;
 }
 
 function normalizeJsonError(error) {

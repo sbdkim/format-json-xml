@@ -1,6 +1,6 @@
-# XML JSON Formatter
+# Format JSON & XML
 
-Privacy-first JSON and XML formatter for cleaning up structured text entirely in the browser with no backend.
+Local-first JSON and XML formatter for cleaning up structured data in the browser with the Northline visual system.
 
 ## Live Demo
 Deployable as a static GitHub Pages app with relative asset paths.
@@ -42,4 +42,4 @@ npm run test
 
 ## Privacy / Notes
 - All parsing and formatting happen in the browser.
-- This repo and `format-foundry` currently share the same product shape, but this README keeps the repo name aligned with the actual folder/repo name.
+- The public product name is `Format JSON & XML`, while the current repo slug remains `xml_json_formatter` until the rename pass.

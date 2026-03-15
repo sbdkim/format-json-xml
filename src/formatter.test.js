@@ -60,6 +60,6 @@ describe('helpers', () => {
   });
 
   test('creates download names', () => {
-    expect(getDownloadName('json', 'formatted')).toBe('format-foundry-formatted.json');
+    expect(getDownloadName('json', 'formatted')).toBe('format-json-xml-formatted.json');
   });
 });

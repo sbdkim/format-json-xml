@@ -3,11 +3,9 @@ import { formatInput, getDownloadName, inferModeFromFile, samples } from './form
 
 const MODE_STORAGE_KEY = 'format-foundry:last-mode';
 const DRAFT_STORAGE_PREFIX = 'format-foundry:draft:';
-const THEME_STORAGE_KEY = 'format-foundry:theme';
 
 const state = {
   mode: localStorage.getItem(MODE_STORAGE_KEY) || 'json',
-  theme: localStorage.getItem(THEME_STORAGE_KEY) || 'dark',
   drafts: {
     json: localStorage.getItem(`${DRAFT_STORAGE_PREFIX}json`) || '',
     xml: localStorage.getItem(`${DRAFT_STORAGE_PREFIX}xml`) || '',
@@ -18,23 +16,26 @@ const state = {
 
 document.querySelector('#app').innerHTML = `
   <div class="app-shell">
-    <header class="topbar">
+    <header class="hero-panel">
       <div class="brand">
-        <p class="brand-name">Format Foundry</p>
-        <p class="brand-note">Local JSON and XML cleanup with import, validation, and export.</p>
+        <p class="eyebrow">Northline Dev</p>
+        <h1>Format JSON & XML</h1>
+        <p class="brand-note">Clean up structured data in a calmer local-first workspace with quick formatting, validation, import, and export.</p>
       </div>
-
-      <div class="topbar-controls">
-        <button class="theme-toggle" type="button" id="themeToggle" aria-pressed="false">
-          <span class="theme-toggle-label">Light mode</span>
-        </button>
-        <div class="tabs" role="tablist" aria-label="Formatter mode">
-          <button class="tab-button" type="button" role="tab" data-mode="json" id="tab-json">JSON</button>
-          <button class="tab-button" type="button" role="tab" data-mode="xml" id="tab-xml">XML</button>
-        </div>
-        <p class="trust-note" aria-label="Trust note">Local only <span aria-hidden="true">/</span> No upload</p>
+      <div class="hero-note">
+        <span class="hero-note-label">Local-first</span>
+        <strong>Browser only</strong>
+        <p>No uploads, no tracking, and no server round-trip for your JSON or XML.</p>
       </div>
     </header>
+
+    <div class="topbar-controls">
+      <div class="tabs" role="tablist" aria-label="Formatter mode">
+        <button class="tab-button" type="button" role="tab" data-mode="json" id="tab-json">JSON</button>
+        <button class="tab-button" type="button" role="tab" data-mode="xml" id="tab-xml">XML</button>
+      </div>
+      <p class="trust-note" aria-label="Trust note">Format fast <span aria-hidden="true">/</span> Keep data local</p>
+    </div>
 
     <main class="workspace" aria-label="Formatter application">
       <section class="toolbar" aria-label="Formatter actions">
@@ -120,24 +121,6 @@ const inputStats = document.querySelector('#inputStats');
 const outputStats = document.querySelector('#outputStats');
 const tabButtons = Array.from(document.querySelectorAll('.tab-button'));
 const actionButtons = Array.from(document.querySelectorAll('.action-button'));
-const themeToggle = document.querySelector('#themeToggle');
-const themeToggleLabel = themeToggle.querySelector('.theme-toggle-label');
-
-function applyTheme(theme) {
-  state.theme = theme;
-  document.documentElement.dataset.theme = theme;
-  document.documentElement.style.colorScheme = theme;
-  localStorage.setItem(THEME_STORAGE_KEY, theme);
-
-  const isDark = theme === 'dark';
-  themeToggle.setAttribute('aria-pressed', String(!isDark));
-  themeToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
-  themeToggleLabel.textContent = isDark ? 'Light mode' : 'Dark mode';
-}
-
-function toggleTheme() {
-  applyTheme(state.theme === 'dark' ? 'light' : 'dark');
-}
 
 function saveDraft(mode, value) {
   state.drafts[mode] = value;
@@ -161,8 +144,8 @@ function updateOutputMeta() {
 
 function updatePlaceholders() {
   inputEditor.placeholder = state.mode === 'json'
-    ? '{\n  "team": "foundry",\n  "ready": true\n}'
-    : '<project>\n  <team>foundry</team>\n  <ready>true</ready>\n</project>';
+    ? '{\n  "suite": "Northline",\n  "workflow": "format-json-xml",\n  "ready": true\n}'
+    : '<project>\n  <suite>Northline</suite>\n  <workflow>format-json-xml</workflow>\n  <ready>true</ready>\n</project>';
 }
 
 function setStatus(message, type = 'idle', detail = 'Shortcuts: Ctrl/Cmd + Enter formats. Ctrl/Cmd + Shift + M minifies.') {
@@ -383,8 +366,6 @@ actionButtons.forEach((button) => {
   button.addEventListener('click', () => handleAction(button.dataset.action));
 });
 
-themeToggle.addEventListener('click', toggleTheme);
-
 fileInput.addEventListener('change', async (event) => {
   const [file] = event.target.files;
   await importFile(file);
@@ -467,7 +448,6 @@ window.addEventListener('keydown', (event) => {
 });
 
 inputEditor.value = state.drafts[state.mode] || '';
-applyTheme(state.theme);
 updatePlaceholders();
 updateInputMeta();
 updateOutputMeta();
