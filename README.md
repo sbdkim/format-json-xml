@@ -5,8 +5,6 @@ Local-first JSON and XML formatter for cleaning up structured data in the browse
 ## Live Demo
 Deployable as a static GitHub Pages app with relative asset paths.
 
-![Formatter preview](./public/social-card.svg)
-
 ## Key Features
 - Format, minify, and validate JSON and XML
 - Import, export, copy, and sample-loading workflows
