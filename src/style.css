@@ -5,9 +5,9 @@ html {
 body {
   min-height: 100vh;
   background:
-    radial-gradient(circle at top left, rgba(37, 99, 235, 0.14), transparent 30%),
-    radial-gradient(circle at top right, rgba(15, 118, 110, 0.12), transparent 24%),
-    linear-gradient(180deg, #fffdf8 0%, var(--color-surface-base) 100%);
+    radial-gradient(circle at top left, color-mix(in srgb, var(--color-brand-primary) 20%, transparent), transparent 30%),
+    radial-gradient(circle at top right, color-mix(in srgb, var(--color-brand-secondary) 18%, transparent), transparent 24%),
+    linear-gradient(180deg, color-mix(in srgb, var(--color-surface-raised) 84%, var(--color-surface-base)) 0%, var(--color-surface-base) 100%);
 }
 
 button {
