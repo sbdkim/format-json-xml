@@ -1,9 +1,9 @@
 # Format JSON & XML
 
-Local-first JSON and XML formatter for cleaning up structured data in the browser with the Northline visual system.
+A local-first JSON and XML formatter for cleaning up structured data entirely in the browser.
 
 ## Live Demo
-Deployable as a static GitHub Pages app with relative asset paths.
+Static GitHub Pages deployment is supported, but no published URL is documented in the repo yet.
 
 ## Key Features
 - Format, minify, and validate JSON and XML
@@ -32,12 +32,14 @@ npm run test
 ## Deployment Notes
 - The app uses `base: './'`, so it can be hosted safely under a GitHub Pages project subpath.
 - Keep shared assets relative so the same build works locally and when deployed.
+- Use `npm run build` to generate the static output.
 
 ## Project Layout
-- `src/` application code
+- `src/` formatter logic and browser UI code
 - `public/` static assets and manifest
 - `.github/workflows/` CI and Pages deployment workflows
+- `vite.config.js` static-hosting configuration
 
-## Privacy / Notes
+## Notes
 - All parsing and formatting happen in the browser.
 - The public product name is `Format JSON & XML`, and the repo slug target is `format-json-xml`.
