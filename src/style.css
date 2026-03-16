@@ -160,14 +160,14 @@ button:disabled {
 }
 
 .tab-button.is-active {
-  background: color-mix(in srgb, var(--color-brand-primary) 14%, white);
+  background: color-mix(in srgb, var(--color-brand-primary) 14%, var(--surface));
   color: var(--color-brand-primary);
 }
 
 .tab-button:focus-visible,
 .action-button:focus-visible,
 .editor:focus-visible {
-  outline: 3px solid color-mix(in srgb, var(--color-brand-accent) 48%, white);
+  outline: 3px solid color-mix(in srgb, var(--color-brand-accent) 36%, transparent);
   outline-offset: 2px;
 }
 
@@ -213,7 +213,7 @@ button:disabled {
 }
 
 .status-bar[data-state='idle'] {
-  background: color-mix(in srgb, var(--color-surface-sunken) 52%, white);
+  background: color-mix(in srgb, var(--color-surface-sunken) 52%, var(--color-surface-raised));
 }
 
 .status-message {
@@ -222,13 +222,13 @@ button:disabled {
 }
 
 .status-bar[data-state='success'] {
-  border-color: color-mix(in srgb, var(--color-status-success) 28%, white);
-  background: color-mix(in srgb, var(--color-status-success) 7%, white);
+  border-color: color-mix(in srgb, var(--color-status-success) 28%, var(--color-surface-raised));
+  background: color-mix(in srgb, var(--color-status-success) 9%, var(--color-surface-raised));
 }
 
 .status-bar[data-state='error'] {
-  border-color: color-mix(in srgb, var(--color-status-error) 30%, white);
-  background: color-mix(in srgb, var(--color-status-error) 7%, white);
+  border-color: color-mix(in srgb, var(--color-status-error) 30%, var(--color-surface-raised));
+  background: color-mix(in srgb, var(--color-status-error) 9%, var(--color-surface-raised));
 }
 
 .status-bar[data-state='success'] .status-message {
@@ -279,17 +279,17 @@ button:disabled {
   align-items: center;
   min-height: 30px;
   padding: 0 var(--space-3);
-  border: 1px solid color-mix(in srgb, var(--color-brand-secondary) 26%, white);
+  border: 1px solid color-mix(in srgb, var(--color-brand-secondary) 26%, var(--surface));
   border-radius: var(--radius-full);
   color: var(--color-brand-secondary);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
-  background: color-mix(in srgb, var(--color-brand-secondary) 10%, white);
+  background: color-mix(in srgb, var(--color-brand-secondary) 10%, var(--surface));
 }
 
 .meta-chip-muted {
   border-color: var(--color-border-default);
-  background: color-mix(in srgb, var(--color-surface-sunken) 65%, white);
+  background: color-mix(in srgb, var(--color-surface-sunken) 65%, var(--surface));
   color: var(--color-text-secondary);
 }
 
@@ -320,7 +320,7 @@ button:disabled {
 
 .editor:focus-visible {
   border-color: var(--color-brand-primary);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-brand-primary) 14%, white);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-brand-primary) 16%, transparent);
 }
 
 .editor-output {
@@ -328,7 +328,7 @@ button:disabled {
 }
 
 .editor-panel-drop.is-dropping {
-  border-color: color-mix(in srgb, var(--color-brand-accent) 45%, white);
+  border-color: color-mix(in srgb, var(--color-brand-accent) 45%, var(--surface));
 }
 
 .drop-hint {
@@ -337,7 +337,7 @@ button:disabled {
   display: none;
   place-items: center;
   padding: var(--space-6);
-  border: 2px dashed color-mix(in srgb, var(--color-brand-accent) 40%, white);
+  border: 2px dashed color-mix(in srgb, var(--color-brand-accent) 40%, var(--surface));
   border-radius: var(--radius-lg);
   background: var(--color-surface-overlay);
   color: var(--color-brand-secondary);
